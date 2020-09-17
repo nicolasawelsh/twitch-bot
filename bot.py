@@ -43,31 +43,36 @@ async def event_message(ctx):
 @bot.command(name="betterttv")
 async def betterttv(ctx):
     command = commands_dict.get("betterttv")
-    await ctx.send(command)
+    if command is not None:
+        await ctx.send(command)
 
 
 @bot.command(name="catjam")
 async def catjam(ctx):
     command = commands_dict.get("catjam")
-    await ctx.send(command)
+    if command is not None:
+        await ctx.send(command)
 
 
 @bot.command(name="catjamultra")
 async def catjamultra(ctx):
     command = commands_dict.get("catjamultra")
-    await ctx.send(command)
+    if command is not None:
+        await ctx.send(command)
 
 
 @bot.command(name="discord")
 async def discord(ctx):
     command = commands_dict.get("discord")
-    await ctx.send(command)
+    if command is not None:
+        await ctx.send(command)
 
 
 @bot.command(name="donate")
 async def donate(ctx):
     command = commands_dict.get("donate")
-    await ctx.send(command)
+    if command is not None:
+        await ctx.send(command)
 
 
 @bot.command(name="frog")
@@ -79,37 +84,43 @@ async def frog(ctx):
 @bot.command(name="games")
 async def games(ctx):
     command = commands_dict.get("games")
-    await ctx.send(command)
+    if command is not None:
+        await ctx.send(command)
 
 
 @bot.command(name="loc")
 async def loc(ctx):
     command = commands_dict.get("loc")
-    await ctx.send(command)
+    if command is not None:
+        await ctx.send(command)
 
 
 @bot.command(name="lurk")
 async def lurk(ctx):
     command = commands_dict.get("lurk")
-    await ctx.send(ctx.author.name + command)
+    if command is not None:
+        await ctx.send(ctx.author.name + command)
 
 
 @bot.command(name="rules")
 async def rules(ctx):
     command = commands_dict.get("rules")
-    await ctx.send(command)
+    if command is not None:
+        await ctx.send(command)
 
 
 @bot.command(name="shoutout")
 async def shoutout(ctx, arg):
     command = commands_dict.get("shoutout")
-    await ctx.send(command[0] + arg + command[1] + arg)
+    if command is not None:
+        await ctx.send(command[0] + arg + command[1] + arg)
 
 
 @bot.command(name="specs")
 async def specs(ctx):
     command = commands_dict.get("specs")
-    await ctx.send(command)
+    if command is not None:
+        await ctx.send(command)
 
 
 # @bot.command(name="time")
