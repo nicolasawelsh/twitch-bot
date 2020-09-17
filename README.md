@@ -1,1 +1,21 @@
-# twitch_bot
+# twitch-bot
+## This bot is used in Niccaroni's twitch channel for moderation and other utilites.
+### Commands
+#### Media
+- !discord
+- !youtube
+#### Fun
+- !catjam
+- !catjamultra
+- !frog
+#### Ultilites
+- !betterttv
+- !donate
+- !games
+- !loc
+- !lurk
+- !rules
+- !specs
+- !time
+#### Moderation
+- !shoutout
