@@ -1,5 +1,11 @@
 import os
 from twitchio.ext import commands
+from datetime import datetime
+from pytz import timezone
+
+from get_commands import commands_dict
+
+# pipenv run python bot.py
 
 
 bot = commands.Bot(
@@ -34,9 +40,83 @@ async def event_message(ctx):
         await ctx.channel.send(f"Hi, @{ctx.author.name}!")
 
 
-@bot.command(name='test')
-async def test(ctx):
-    await ctx.send('test passed!')
+@bot.command(name="betterttv")
+async def betterttv(ctx):
+    command = commands_dict.get("betterttv")
+    await ctx.send(command)
+
+
+@bot.command(name="catjam")
+async def catjam(ctx):
+    command = commands_dict.get("catjam")
+    await ctx.send(command)
+
+
+@bot.command(name="catjamultra")
+async def catjamultra(ctx):
+    command = commands_dict.get("catjamultra")
+    await ctx.send(command)
+
+
+@bot.command(name="discord")
+async def discord(ctx):
+    command = commands_dict.get("discord")
+    await ctx.send(command)
+
+
+@bot.command(name="donate")
+async def donate(ctx):
+    command = commands_dict.get("donate")
+    await ctx.send(command)
+
+
+@bot.command(name="frog")
+async def frog(ctx):
+    command = commands_dict.get("frog")
+    await ctx.send(command)
+
+
+@bot.command(name="games")
+async def games(ctx):
+    command = commands_dict.get("games")
+    await ctx.send(command)
+
+
+@bot.command(name="loc")
+async def loc(ctx):
+    command = commands_dict.get("loc")
+    await ctx.send(command)
+
+
+@bot.command(name="lurk")
+async def lurk(ctx):
+    command = commands_dict.get("lurk")
+    await ctx.send(ctx.author.name + command)
+
+
+@bot.command(name="rules")
+async def rules(ctx):
+    command = commands_dict.get("rules")
+    await ctx.send(command)
+
+
+@bot.command(name="shoutout")
+async def shoutout(ctx, arg):
+    command = commands_dict.get("shoutout")
+    await ctx.send(command[0] + arg + command[1] + arg)
+
+
+@bot.command(name="specs")
+async def specs(ctx):
+    command = commands_dict.get("specs")
+    await ctx.send(command)
+
+
+# @bot.command(name="time")
+# async def time(ctx):
+#     command = commands_dict.get("time")
+#     curr_time = datetime.now(command[1])
+#     await ctx.send(command[0] + curr_time + " " + command[1])
 
 
 if __name__ == "__main__":
